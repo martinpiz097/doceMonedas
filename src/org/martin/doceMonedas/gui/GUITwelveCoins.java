@@ -28,9 +28,10 @@ public class GUITwelveCoins extends javax.swing.JFrame {
         formGame.setSize(formGame.getPreferredSize());
         formGame.setLocationRelativeTo(null);
         formGame.setResizable(false);
+        formGame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         dialogHelp.setSize(dialogHelp.getPreferredSize());
         dialogHelp.setLocationRelativeTo(formGame);
-        formGame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        txtRules.setEditable(false);
     }
 
     /**
@@ -66,7 +67,7 @@ public class GUITwelveCoins extends javax.swing.JFrame {
         itemHelp = new javax.swing.JMenuItem();
         dialogHelp = new javax.swing.JDialog();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        txtRules = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -279,14 +280,14 @@ public class GUITwelveCoins extends javax.swing.JFrame {
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setFont(new java.awt.Font("DejaVu Sans", 1, 14)); // NOI18N
-        jTextArea2.setLineWrap(true);
-        jTextArea2.setRows(1);
-        jTextArea2.setTabSize(4);
-        jTextArea2.setText("Debe eliminar una moneda haciendo click, \npuede eliminar como máximo dos siempre\ny cuando éstas sean contiguas. El jugador\nque elimina la última moneda gana el\njuego.");
-        jTextArea2.setOpaque(true);
-        jScrollPane2.setViewportView(jTextArea2);
+        txtRules.setColumns(20);
+        txtRules.setFont(new java.awt.Font("DejaVu Sans", 1, 14)); // NOI18N
+        txtRules.setLineWrap(true);
+        txtRules.setRows(1);
+        txtRules.setTabSize(4);
+        txtRules.setText("Debe eliminar una moneda haciendo click, \npuede eliminar como máximo dos siempre\ny cuando éstas sean contiguas. El jugador\nque elimina la última moneda gana el\njuego.");
+        txtRules.setOpaque(true);
+        jScrollPane2.setViewportView(txtRules);
 
         jLabel4.setFont(new java.awt.Font("DejaVu Sans", 1, 24)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -311,7 +312,7 @@ public class GUITwelveCoins extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -648,7 +649,6 @@ public class GUITwelveCoins extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JLabel lbl0;
     private javax.swing.JLabel lbl1;
     private javax.swing.JLabel lbl10;
@@ -665,5 +665,6 @@ public class GUITwelveCoins extends javax.swing.JFrame {
     private javax.swing.JPanel panelGame;
     private javax.swing.JTextField txtPlayer1;
     private javax.swing.JTextField txtPlayer2;
+    private javax.swing.JTextArea txtRules;
     // End of variables declaration//GEN-END:variables
 }
